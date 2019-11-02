@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyC1g07bTF040l7wAo7fsSn4FniRDKL51Nw",
+    authDomain: "cartelera-ccs-e1596.firebaseapp.com",
+    databaseURL: "https://cartelera-ccs-e1596.firebaseio.com",
+    projectId: "cartelera-ccs-e1596",
+    storageBucket: "cartelera-ccs-e1596.appspot.com",
+    messagingSenderId: "29568983741",
+    appId: "1:29568983741:web:aa7577fcbb7d2b51968dd4"
+
+  }
 };
 
 /*

@@ -21,7 +21,7 @@ const routes: Routes = [
    component: MovieDetailsComponent
  },
  {
-   path:"book",
+   path:"book/:id",
    component: BookComponent
  },
  {

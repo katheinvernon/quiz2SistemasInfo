@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito|Salsa&display=swap');
 
 // colors
-$color-primary: #0c0b0b;
+$color-primary: #3b3535;
 $color-secondary: rgb(228, 23, 23);
+$color-terciary: #bbbaba;
 
 // other colors
 $color-danger: #FF0F00;
@@ -21,7 +22,7 @@ $font-family-secondary: 'Salsa', cursive;
 
 
 // buttons
-$button-color: rgb(240, 219, 219);
+$button-color:$color-secondary;
 $btn-height: 34px;
 $btn-min-width: 120px; 
 

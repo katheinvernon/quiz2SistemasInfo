@@ -5,38 +5,51 @@
                 <h1>
                     {{selectedMovie.Title}}
                 </h1>
-                <img src="https://image.flaticon.com/icons/png/512/0/340.png" routerLink ="/home">
+                <img src="https://image.flaticon.com/icons/png/512/0/340.png" routerLink="/home">
             </div>
         </div>
         <div class="row info-wrapper">
             <div class="col-12 col-md-6 col-lg-6 movie-poster">
                 <img src="{{selectedMovie.Poster}}">
             </div>
-            <div class="col-12 col-md-6 col-lg-6  movie-plot">
-                <span>
+            <div class="col-12 col-md-6 col-lg-6 py-4 movie-plot">
+                <b>Sinopsis: </b>
+                <p>
                     {{selectedMovie.Plot}}
-                </span>
-                <span>
-                    <b><br>Director: </b>{{selectedMovie.Director}}
-                </span>
-                <span>
-                    <b><br>Actors: </b> {{selectedMovie.Actors}}
-                </span>
-                <span>
-                    <b><br>Awards: </b> {{selectedMovie.Awards}}
-                </span>
-                <span>
-                    <b><br>Genre: </b>
-                </span>
-                <span *ngFor="let genre of selectedMovie.Genre">
-                    {{genre}}
-                </span>
-                <span>
-                    <b><br>Year: </b> {{selectedMovie.Year}}
-                </span>
-                <span>
-                    <b><br>Runtime: </b> {{selectedMovie.Runtime}}
-                </span>
+                </p>
+                <p>
+                    <b>Director: </b>{{selectedMovie.Director}}
+                </p>
+                <p>
+                    <b>Actores: </b> {{selectedMovie.Actors}}
+                </p>
+                <p>
+                    <b>Premios: </b> {{selectedMovie.Awards}}
+                </p>
+                <p>
+                    <b>Género: </b>
+                </p>
+                <div class="genre-box">
+                    <p *ngFor="let genre of selectedMovie.Genre">
+                        {{genre}}
+                    </p>
+                </div>
+                <p>
+                    <b>Año: </b> {{selectedMovie.Year}}
+                </p>
+                <p>
+                    <b>Duració: </b> {{selectedMovie.Runtime}}
+                </p>
+                <div class="movie-book">
+                    <button class="btn btn-block cc-btn cc-btn--primary" *ngIf="selectedMovie.Available"
+                    (click)="reservar(selectedMovie)">
+                        Reservar
+                    </button>
+                    <h4 *ngIf="selectedMovie.ComingSoon">
+                        Próximamente: {{selectedMovie.Released}}
+                    </h4>
+                </div>
+
             </div>
 
         </div>

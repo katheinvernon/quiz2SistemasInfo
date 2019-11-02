@@ -52,7 +52,7 @@
         </div>
         <div class="row cc-thumbnail-wrapper">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2" *ngFor="let movie of moviesComing | movieFilter: searchNameComing">
-                <app-movie-thumbnail [movie]="movie"></app-movie-thumbnail>
+                <app-movie-thumbnail [movie]="movie"  (click)="seleccionado(movie)"></app-movie-thumbnail>
             </div>
 
         </div>

@@ -1,1 +1,90 @@
-<p>book works!</p>
+<section class="cc-section">
+    <div class="container book-wrapper">
+        <div class="row">
+            <div class="col-12 title">
+                <h1>
+                    Datos de la reserva
+                </h1>
+            </div>
+        </div>
+        <div class="row form">
+            <div class="col-12">
+                <form [formGroup]="clientForm">
+                    <div class="form-row">
+                        <div class="col-12 col-md-6 form-group">
+                            <label>
+                                Nombre
+                            </label>
+                            <input type="text" class="form-control" formControlName="name">
+                        </div>
+                        <div class="col-12 col-md-6 form-group">
+                            <label>
+                                Apellido
+                            </label>
+                            <input type="text" class="form-control" formControlName="lastName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 form-group">
+                            <label>
+                                Cedula
+                            </label>
+                            <input type="text" class="form-control" formControlName="id">
+                        </div>
+                        <div class="col-6 col-md-3 form-group">
+                            <label>
+                                Sexo
+                            </label>
+                            <!-- <mat-form-field>
+                                <mat-label>Sexo</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let genre of genres" [value]="genre.value">
+                                        {{genre.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field> -->
+                            <!-- <input type="text" class="form-control" formControlName="genre"> -->
+                            <select formControlName="genre" class="form-control">
+                                    <option selected value=''> Seleccione </option>
+                                    <option *ngFor="let genre of genres" [value]="genre.value"> {{genre.viewValue}} </option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-3 form-group">
+                            <label>
+                                Cantidad
+                            </label>
+                            <select formControlName="quantity" class="form-control">
+                                    <option selected value=''> Seleccione </option>
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 form-group">
+                            <label>
+                                Dirección
+                            </label>
+                            <input type="text" formControlName="adress" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 form-group">
+                            <label>
+                                Correo
+                            </label>
+                            <input type="text" formControlName="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-block cc-btn cc-btn--primary" type="submit" [disabled]="clientForm.invalid"
+                        (click)="sendData()">
+                        Confirmar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

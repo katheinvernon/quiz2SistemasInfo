@@ -24,11 +24,16 @@ export class MovieDetailsComponent implements OnInit {
       let id= this.route.snapshot.paramMap.get('id');
       this.selectedMovie = this.movieService.getMovie(id);
 
-      console.log(this.selectedMovie);
     })
       // switchMap((params: ParamMap) =>
       //   this.service.getHero(params.get('id')))
     
+  }
+  
+  reservar(movie){
+    const id = movie.Id;     
+    this.router.navigate(["/book", movie.Id])
+
   }
 
 }

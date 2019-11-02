@@ -46,6 +46,23 @@
         object-fit: contain;
       }
     }
+
+    .genre-box{
+      display: flex;
+      justify-content: space-around;
+    }
+
+    // .movie-plot{
+    //   font-family: $font-family-primary;
+    // }
+
+    //   .movie-book{
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: 0;
+    //   }
+    // }
+    
   }
 
   .imgs-wrapper {
