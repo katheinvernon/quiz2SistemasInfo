@@ -20,8 +20,10 @@ export interface genre {
 
 export class BookComponent implements OnInit {
 
+  movieId
   movie
-  selectedMovie
+  loading=false;
+
   genres: genre[] = [
     { value: 'fem-0', viewValue: 'Femenino' },
     { value: 'masc-1', viewValue: 'Masculino' },
@@ -49,14 +51,13 @@ export class BookComponent implements OnInit {
     this.createClientForm();
 
     this.movie = this.route.paramMap.subscribe(e => {
-      let id = this.route.snapshot.paramMap.get('id');
-      this.selectedMovie = this.movieService.getMovie(id);
-
-      console.log(this.selectedMovie);
+      this.movieId = this.route.snapshot.paramMap.get('id');
     })
 
   }
   sendData() {
+
+      this.loading=true;
 
     let data = {
       name: this.clientForm.controls.name.value,
@@ -66,6 +67,7 @@ export class BookComponent implements OnInit {
       quantity: this.clientForm.controls.quantity.value,
       adress: this.clientForm.controls.adress.value,
       email: this.clientForm.controls.email.value,
+      movieId: this.movieId,
 
     }
 
@@ -76,6 +78,7 @@ export class BookComponent implements OnInit {
         this.clientForm.reset();
       })
       .catch(err => {
+        this.loading = false;
         alert("Ha habido un error con la información introducida")
       })
 

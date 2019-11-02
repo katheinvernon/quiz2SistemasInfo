@@ -79,9 +79,15 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-block cc-btn cc-btn--primary" type="submit" [disabled]="clientForm.invalid"
+                    <button *ngIf="!loading"
+                    class="btn btn-block cc-btn cc-btn--primary" type="submit" [disabled]="clientForm.invalid"
                         (click)="sendData()">
                         Confirmar
+                    </button>
+
+                    <button *ngIf="loading"
+                    class="btn btn-block cc-btn btn-dark">
+                        Cargando
                     </button>
                 </form>
             </div>

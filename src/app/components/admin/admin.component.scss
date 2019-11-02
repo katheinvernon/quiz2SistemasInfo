@@ -1,0 +1,36 @@
+@import "../../styles/sass/layout/layout.scss";
+@import "../../styles/sass/lib/variables";
+@import "../../styles/sass/components/thumbnail";
+@import "../../styles/sass/components/button";
+@import "../../styles/sass/components/tag";
+
+.orders-wrapper {
+  height: auto;
+  font-family: $font-family-primary;
+  color: white;
+
+  .orders-list-wrapper{
+      color: black;
+      background-color: white;
+      text-align: center;
+      margin-top: 0.2rem;
+
+      .list-category{
+          border-left-style: solid;
+          border-left-width: 0.2rem;
+          border-left-color: $color-primary;
+          border-right-style: solid;
+          border-right-width: 0.2rem;
+          border-right-color: $color-primary;
+      }
+  }
+
+  .title {
+    margin-top: 1rem;
+    position: relative;
+    background-color: $color-secondary;
+    width: 100%;
+    text-align: center;
+  }
+
+}

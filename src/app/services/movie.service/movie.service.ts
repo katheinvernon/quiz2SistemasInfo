@@ -25,6 +25,13 @@ export class MovieService {
     return this.movies.find (movie => movie.Id === id)
   }
 
+  getMovieName(id){
+    console.log(id);
+    
+    let movieSelected = this.movies.find(movie => movie.Id === id);
+    return movieSelected.Title;
+  }
+
   getMoviesAvailable(){
     return this.movies.filter (movie => movie.Available)
   }

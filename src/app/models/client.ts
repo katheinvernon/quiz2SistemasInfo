@@ -6,4 +6,5 @@ export interface client {
     quantity: number;
     adress: string;
     email: string;
+    movieId:string;
 }
