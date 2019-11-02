@@ -1,0 +1,38 @@
+@import "../../styles/sass/layout/layout.scss";
+@import "../../styles/sass/lib/variables";
+@import "../../styles/sass/components/thumbnail";
+@import "../../styles/sass/components/button";
+@import "../../styles/sass/components/tag";
+
+.welcome-wrapper{
+    min-height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: blueviolet;
+
+    .text-box{
+
+        // background-color: chartreuse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: $font-family-primary;
+        color: white;
+        text-align: center;
+        // transition: 2s;
+
+        .title{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .subTitle{
+            font-size: 1.5rem;
+        }
+        // &:hover{
+        //     transform: scale(1.5);
+        // }
+    }
+}

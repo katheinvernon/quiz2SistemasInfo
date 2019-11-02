@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../src/app/styles/sass/layout/layout.scss";
+@import "../src/app/styles/sass/lib/variables";
+@import "../src/app/styles/sass/components/button";
+@import "../src/app/styles/sass/components/thumbnail";
+@import "../src/app/styles/sass/components/tag";
+
+body,ul,ol,html,figure{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 16px;
+    background-color: $color-primary;
+}
+
+*{
+    box-sizing: border-box;
+}
+

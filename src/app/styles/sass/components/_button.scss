@@ -1,0 +1,13 @@
+button.cc-btn{
+    height: $btn-height;
+    min-width: $btn-min-width;
+    box-shadow: $button-shadow;
+    font-size: 1rem;
+    font-family: $font-family-primary;
+
+    &.cc-btn--primary{
+        background-color: $button-color;
+    }
+    
+
+}

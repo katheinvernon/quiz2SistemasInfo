@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Salsa&display=swap');
+
+// colors
+$color-primary: #0c0b0b;
+$color-secondary: rgb(228, 23, 23);
+
+// other colors
+$color-danger: #FF0F00;
+$color-success: #46C127;
+$color-warning: #fecf61;
+$color-box-shadow: rgba(0, 0, 0, 0.25);
+
+
+//box-shadows
+$box-shadow: 5px 5px 2px $color-box-shadow;
+$button-shadow: 3px 3px 2px $color-box-shadow;
+
+// font-family
+$font-family-primary: 'Nunito', 'sans-serif';
+$font-family-secondary: 'Salsa', cursive;
+
+
+// buttons
+$button-color: rgb(240, 219, 219);
+$btn-height: 34px;
+$btn-min-width: 120px; 
+
+//tags
+$tag-min-width: 300px;
+$tag-height: 70px;

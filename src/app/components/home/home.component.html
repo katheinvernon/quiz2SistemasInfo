@@ -1,0 +1,61 @@
+<section class="cc-section">
+
+    <div class="container welcome-wrapper">
+        <div class="row text-box">
+            <div class="col-12 title">
+                <h1>
+                    Bienvenido a Cartelera Caracas
+                </h1>
+            </div>
+            <div class="col-12 subTitle">
+                <h3>
+                    Tu mejor opción
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="cc-section">
+    <div class="container">
+
+        <!-- falta colocar el filtro -->
+        <div class="row cc-tag">
+            <div class="col-12 col-md-6 col-lg-8">
+                Cartelera
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <input class="form-control" placeholder="Buscar por nombre" [(ngModel)]="searchName" />
+            </div>
+        </div>
+        <div class="row cc-thumbnail-wrapper">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2"
+                *ngFor="let movie of moviesAvailable | movieFilter: searchName" >
+                <app-movie-thumbnail [movie]="movie" (click)="seleccionado(movie)"></app-movie-thumbnail>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section class="cc-section">
+    <div class="container">
+
+        <div class="row cc-tag">
+            <div class="col-12 col-md-6 col-lg-8">
+                Proximamente
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <input class="form-control" placeholder="Buscar por nombre" [(ngModel)]="searchNameComing" />
+            </div>
+        </div>
+        <div class="row cc-thumbnail-wrapper">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2" *ngFor="let movie of moviesComing | movieFilter: searchNameComing">
+                <app-movie-thumbnail [movie]="movie"></app-movie-thumbnail>
+            </div>
+
+        </div>
+    </div>
+
+</section>

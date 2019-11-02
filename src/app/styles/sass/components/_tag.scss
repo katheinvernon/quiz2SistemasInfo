@@ -1,0 +1,17 @@
+.cc-tag{
+
+    height: auto;
+    min-width: $tag-min-width;
+    background-color: $color-secondary;
+    font-size: 2rem;
+    font-family: $font-family-primary;
+    color: white;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    
+    //alinean en y
+    vertical-align: middle;
+    padding: 2rem;
+
+}
