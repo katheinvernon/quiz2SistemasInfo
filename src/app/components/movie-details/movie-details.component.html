@@ -1,12 +1,56 @@
 <section class="cc-section">
-    <div class="text-wrapper">
-        <div class="row title">
-            <div class="col-12">
-
+    <div class="container text-wrapper">
+        <div class="row">
+            <div class="col-12 title">
+                <h1>
+                    {{selectedMovie.Title}}
+                </h1>
+                <img src="https://image.flaticon.com/icons/png/512/0/340.png" routerLink ="/home">
             </div>
         </div>
-        <div class="row ">
-            <div class="">
+        <div class="row info-wrapper">
+            <div class="col-12 col-md-6 col-lg-6 movie-poster">
+                <img src="{{selectedMovie.Poster}}">
+            </div>
+            <div class="col-12 col-md-6 col-lg-6  movie-plot">
+                <span>
+                    {{selectedMovie.Plot}}
+                </span>
+                <span>
+                    <b><br>Director: </b>{{selectedMovie.Director}}
+                </span>
+                <span>
+                    <b><br>Actors: </b> {{selectedMovie.Actors}}
+                </span>
+                <span>
+                    <b><br>Awards: </b> {{selectedMovie.Awards}}
+                </span>
+                <span>
+                    <b><br>Genre: </b>
+                </span>
+                <span *ngFor="let genre of selectedMovie.Genre">
+                    {{genre}}
+                </span>
+                <span>
+                    <b><br>Year: </b> {{selectedMovie.Year}}
+                </span>
+                <span>
+                    <b><br>Runtime: </b> {{selectedMovie.Runtime}}
+                </span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 title">
+                <h1>
+                    Movie Scenes
+                </h1>
+            </div>
+        </div>
+        <div class="row imgs-wrapper">
+            <div class="col-12 movie-imgs">
+
+                <img *ngFor="let imgMovie of selectedMovie.Images" src="{{imgMovie}}">
 
             </div>
         </div>
